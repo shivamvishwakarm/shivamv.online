@@ -35,7 +35,7 @@ export default function Home() {
           <SimpleTooltip key={"Resume-btn"} content={"Resume"} side="bottom" >
             <Link
               target="_blank"
-              href={"/1.5+_yrExp_Shivam.pdf"}
+              href={"/shivam_1+yr_ex_software_engineer.pdf"}
               className="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background btn-inner-shadow hover:bg-accent dark:border-input dark:hover:bg-input/50 inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-md border-black bg-[#737373] px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 has-[>svg]:px-3 dark:bg-[#737373] dark:text-black [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
             >
               <FileText className="size-4 md:size-5" />
