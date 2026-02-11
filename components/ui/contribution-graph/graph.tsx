@@ -3,7 +3,7 @@
 import dayjs from "dayjs";
 import { LoaderIcon } from "lucide-react";
 import { use } from "react";
-
+import { USER } from "@/data/user"
 import type { Activity } from "@/components/ui/contribution-graph";
 import {
   ContributionGraph,
@@ -18,7 +18,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-const GITHUB_USERNAME = "shivamvishwakarm"
+const GITHUB_USERNAME = USER.socialUserName.Github
 
 export function GitHubContributionGraph({
   contributions,

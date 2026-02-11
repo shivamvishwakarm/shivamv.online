@@ -1,10 +1,11 @@
 import type { Activity } from "@/components/ui/contribution-graph";
+import { USER } from "@/data/user";
 
 type GitHubContributionsResponse = {
   contributions: Activity[];
 };
 
-const GITHUB_USERNAME = "shivamvishwakarm"
+const GITHUB_USERNAME = USER.socialUserName.Github
 
 export async function getGitHubContributions() {
   const res = await fetch(

@@ -11,6 +11,11 @@ export const USER = {
     phoneNumber: "8797107072",
     address: "Bihar, India",
     currentLocation: "Odisha, India",
+    socialUserName: {
+        Github: "shivamvishwakarm",
+        Linkedin: "shivamvisss",
+        Twitter: "shivam_visss"
+    },
     socialLinks: [
         {
 
