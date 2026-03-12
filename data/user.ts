@@ -4,6 +4,7 @@ import Linkedin from "@/components/icons/linkedin";
 import Twitter from "@/components/icons/twitter";
 
 
+
 export const USER = {
     firstName: "Shivam",
     lastName: "Vishwakarma",
@@ -114,6 +115,15 @@ And I try to prove that with every project I take on.`,
     ],
 
     PR: [
+        {
+            title: "Blog Schedule with DLQ (backend)",
+            link: "https://github.com/the-monkeys/monkeys_engine/pull/354"
+        },
+        {
+            title: "Blog Schedule with timezone, date and time (frontend)",
+            link: "https://github.com/the-monkeys/the_monkeys/pull/507",
+        },
+
 
         {
             title: "Docker setup + GitHub Actions to push Image to GHCR ",
@@ -130,15 +140,6 @@ And I try to prove that with every project I take on.`,
         {
             title: "Custom embed block for editor.js",
             link: "https://github.com/the-monkeys/the_monkeys/pull/463"
-        },
-
-        {
-            title: "Remove non static image from blog banner",
-            link: "https://github.com/the-monkeys/the_monkeys/pull/451"
-        },
-        {
-            title: "restrict only .gif and .apng file ext",
-            link: "https://github.com/the-monkeys/the_monkeys/pull/454"
         },
     ]
 

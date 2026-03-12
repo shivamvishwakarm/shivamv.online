@@ -22,7 +22,7 @@ const ProfileImage = () => {
           height={100}
           alt="profile"
         />
-        <div className="absolute inset-0 m-1 rounded-full bg-black/40 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-[90px]">
+        <div className="absolute inset-0 ml-[3px] mt-1  rounded-full bg-black/40 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-[94px] h-[94px]">
           <Eye className="text-white w-6 h-6" />
         </div>
       </div>
