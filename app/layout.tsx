@@ -5,6 +5,7 @@ import { Caveat } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
+import Navbar from "@/components/navbar";
 
 
 const geistSans = Geist({
@@ -81,11 +82,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased dark:bg-neutral-900 text-black dark:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="max-w-auto mx-auto px-4 md:max-w-3xl">
 
-          {children}
+            <Navbar />
+            <div className="pt-16">
+              {children}
+            </div>
+          </div>
         </ThemeProvider>
         <Analytics />
+
       </body>
-    </html>
+    </html >
   );
 }

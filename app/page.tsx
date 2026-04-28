@@ -4,7 +4,6 @@ import { USER } from "@/data/user";
 import PRCard from "@/components/cards/pr-card";
 import { GitHubContributions } from "@/components/ui/contribution-graph/contribute";
 import Link from "next/link";
-import DarkLightMode from "@/components/dark-light-mode";
 import { FileText } from "lucide-react";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
@@ -13,11 +12,10 @@ import { SimpleTooltip } from "@/components/ui/tooltip";
 export default function Home() {
   return (
     <div className="w-full">
-      <div className="max-w-auto mx-auto px-4 md:max-w-3xl">
+      <div className="">
         <div className="grid w-full grid-cols-4 gap-4 pt-16 md:items-center">
           <ProfileImage />
           <div className="relative col-span-3">
-            <DarkLightMode />
             <h1 className="text-[1.47rem] font-bold md:text-6xl md:text-[3.4rem] dark:text-white text-right">
               {USER.firstName} {USER.lastName}
             </h1>
