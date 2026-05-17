@@ -49,6 +49,6 @@ A curated collection of books I'm reading and recommend for developers intereste
   ],
 });
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 export const GET = handler.GET;
 export const generateStaticParams = handler.generateStaticParams;
