@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   title: "Shivam | Full Stack Developer - React, Node.js, Next.js",
   description: "Shivam is a full stack web developer specializing in React, Node.js, and Next.js. Available for freelance or full-time opportunities.",
   keywords: ["Full Stack Developer", "React Developer", "Next.js Developer", "Node.js", "Portfolio", "Shivam"],
-  authors: [{ name: "Shivam", url: "https://shivam09.tech" }],
+  authors: [{ name: "Shivam", url: "https://shivamv.online" }],
   creator: "Shivam",
   openGraph: {
     title: "Shivam | Full Stack Developer",
     description: "Explore Shivam's portfolio showcasing full stack projects built with React, Node.js, and Next.js.",
-    url: "https://shivam09.tech",
+    url: "https://shivam.online",
     siteName: "Shivam Portfolio",
     type: "website",
     images: [
       {
-        url: "https://shivam09.tech/og-image.jpg",
+        url: "https://shivamv.online/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Shivam | Full Stack Developer Portfolio",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Shivam | Full Stack Developer",
     description: "React, Node.js, Next.js developer — check out my projects!",
     creator: "@shivam_visss",
-    images: ["https://shivam09.tech/og-image.png"],
+    images: ["https://shivamv.online/og-image.png"],
   },
 };
 

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withDualmark } from "@dualmark/nextjs";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -15,4 +16,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withDualmark(nextConfig, {
+  siteUrl: "https://shivamv.online",
+});
