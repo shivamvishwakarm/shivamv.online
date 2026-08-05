@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Globe, Phone, MapPin } from "lucide-react";
+import { Globe, Phone, MapPin, UserPlus, User } from "lucide-react";
 import { USER } from "@/data/user";
 import { SocialCard } from "@/components/social-card";
 
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function ConnectPage() {
-  // All social links come from USER.socialLinks (includes Mail via mailto:)
   const allCards = [
     ...USER.socialLinks.map((link, i) => ({
       name: link.name,
@@ -19,16 +18,22 @@ export default function ConnectPage() {
       delay: i * 0.08,
     })),
     {
-      name: "Phone",
-      url: `tel:${USER.phoneNumber}`,
-      icon: <Phone className="w-6 h-6" />,
+      name: "Save Contact",
+      url: "/api/contact",
+      icon: <UserPlus className="w-6 h-6" />,
       delay: USER.socialLinks.length * 0.08,
     },
     {
-      name: "Portfolio",
-      url: "https://shivamv.online",
-      icon: <Globe className="w-6 h-6" />,
+      name: "Phone",
+      url: `tel:+91${USER.phoneNumber}`,
+      icon: <Phone className="w-6 h-6" />,
       delay: (USER.socialLinks.length + 1) * 0.08,
+    },
+    {
+      name: "Portfolio",
+      url: USER.website,
+      icon: <Globe className="w-6 h-6" />,
+      delay: (USER.socialLinks.length + 2) * 0.08,
     },
   ];
 
@@ -62,7 +67,7 @@ export default function ConnectPage() {
       </div>
 
       <Link
-        href="https://shivamv.online"
+        href={USER.website}
         className="mt-8 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors duration-150"
       >
         Visit portfolio →
