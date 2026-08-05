@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Globe, Phone, MapPin, UserPlus, User } from "lucide-react";
+import { Globe, Phone, MapPin, UserPlus } from "lucide-react";
 import { USER } from "@/data/user";
 import { SocialCard } from "@/components/social-card";
 
@@ -31,7 +31,7 @@ export default function ConnectPage() {
     },
     {
       name: "Portfolio",
-      url: USER.website,
+      url: `${USER.website}`,
       icon: <Globe className="w-6 h-6" />,
       delay: (USER.socialLinks.length + 2) * 0.08,
     },
@@ -67,7 +67,7 @@ export default function ConnectPage() {
       </div>
 
       <Link
-        href={USER.website}
+        href={`${USER.website}`}
         className="mt-8 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors duration-150"
       >
         Visit portfolio →

@@ -18,9 +18,13 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [qrOpen, setQrOpen] = useState(false);
+  const [origin, setOrigin] = useState("https://shivamv.online");
   const pathname = usePathname();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setOrigin(window.location.origin);
+  }, []);
 
   return (
     <>
@@ -45,7 +49,7 @@ const Navbar = () => {
           })}
         </div>
 
-        {/* Dark mode toggle */}
+        {/* Right side controls */}
         {mounted && (
           <div className="flex items-center gap-3">
             {/* QR code button */}
@@ -76,9 +80,9 @@ const Navbar = () => {
 
     <Dialog isOpen={qrOpen} onClose={() => setQrOpen(false)}>
       <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 border border-neutral-200 dark:border-neutral-800 flex flex-col items-center">
-        <QRCodeWrapper value={`${window.location.origin}/connect`} size={200} />
+        <QRCodeWrapper value={`${origin}/connect`} size={200} />
         <p className="font-[family-name:var(--font-caveat)] text-2xl mt-4">Scan to connect</p>
-        <p className="text-xs text-neutral-500 mt-1">{window.location.host}/connect</p>
+        <p className="text-xs text-neutral-500 mt-1">{origin.replace(/https?:\/\//, "")}/connect</p>
       </div>
     </Dialog>
   </>
