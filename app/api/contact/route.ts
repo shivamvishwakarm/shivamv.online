@@ -41,7 +41,7 @@ export async function GET() {
     status: 200,
     headers: {
       "Content-Type": "text/vcard; charset=utf-8",
-      "Content-Disposition": `attachment; filename="${USER.firstName}-${USER.lastName}.vcf"`,
     },
   });
 }
+ 
