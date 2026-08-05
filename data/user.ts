@@ -11,7 +11,7 @@ export const USER = {
     email: "admin@shivam09.tech",
     phoneNumber: "8797107072",
     address: "Bihar, India",
-    currentLocation: "Odisha, India",
+    currentLocation: "Bengaluru, India",
     socialUserName: {
         Github: "shivamvishwakarm",
         Linkedin: "shivamvisss",
