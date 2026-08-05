@@ -17,6 +17,7 @@ export const USER = {
         Linkedin: "shivamvisss",
         Twitter: "shivam_visss"
     },
+    website: "shivamv.online",
     socialLinks: [
         {
 
