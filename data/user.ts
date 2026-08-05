@@ -8,7 +8,7 @@ import Twitter from "@/components/icons/twitter";
 export const USER = {
     firstName: "Shivam",
     lastName: "Vishwakarma",
-    email: "admin@shivam09.tech",
+    email: "vishwakarmashivam2003@gmail.com",
     phoneNumber: "8797107072",
     address: "Bihar, India",
     currentLocation: "Bengaluru, India",
@@ -38,7 +38,7 @@ export const USER = {
         },
         {
             name: "Mail",
-            url: "mailto:admin@shivam09.tech",
+            url: "mailto:hello09shivam@gmail.com",
             icon: Envelope
         }
 
