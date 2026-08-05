@@ -1,7 +1,7 @@
 import React from "react";
 import { USER } from "@/data/user";
 import Image from "next/image";
-import { ArrowUpRight, Dot, Globe } from "lucide-react";
+import { ArrowUpRight, Dot } from "lucide-react";
 import Link from "next/link";
 
 const Experience = () => {
