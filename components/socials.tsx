@@ -7,7 +7,7 @@ const Socials = () => {
     return (
         <div className='grid grid-cols-5 gap-x-2 gap-y-2 '>
 
-            <div className='space-x-2 col-span-4 rounded-lg flex md:items-end md:justify-end'>
+            <div className='space-x-2 col-span-4 rounded-lg flex md:items-end'>
                 {
                     USER.socialLinks.map((socials) => (
                         <SimpleTooltip key={socials.name} content={socials.name} side="bottom" sideOffset={-4}>
