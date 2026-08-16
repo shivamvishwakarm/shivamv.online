@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <div className="mt-8 mb-4 py-1 md:mt-2">
       <h2 className="mb-3 text-xl font-semibold text-neutral-500 md:text-2xl">
-        Experience{" "}
+        Work{" "}
       </h2>
       <div className="flex w-full flex-col gap-4">
         {USER.job.map((job, index) => (
