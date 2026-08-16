@@ -8,6 +8,7 @@ import { FileText } from "lucide-react";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import { SimpleTooltip } from "@/components/ui/tooltip";
+import PortfolioGallery from "@/components/portfolio-gallery";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
           </SimpleTooltip>
         </div>
 
-        <div className="mt-8 flex flex-col  ">
+        {/* <div className="mt-8 flex flex-col  ">
           <h3 className="mb-3 text-xl font-semibold text-neutral-500 ">
             Open source
           </h3>
@@ -60,7 +61,9 @@ export default function Home() {
               see more
             </Link>
           </div>
-        </div>
+        </div> */}
+
+        <PortfolioGallery />
 
         <Experience />
         <Projects />
