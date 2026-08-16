@@ -202,7 +202,10 @@ export default function PortfolioGallery() {
 
         .gallery-tile[data-position="2"].glitch-transition .gallery-media,
         .gallery-tile[data-position="2"].glitch-transition::before,
-        .gallery-tile[data-position="2"].glitch-transition::after {
+        .gallery-tile[data-position="2"].glitch-transition::after,
+        .gallery-tile[data-position="3"].glitch-transition .gallery-media,
+        .gallery-tile[data-position="3"].glitch-transition::before,
+        .gallery-tile[data-position="3"].glitch-transition::after {
           animation-delay: 110ms;
         }
 
@@ -226,7 +229,7 @@ export default function PortfolioGallery() {
       `}</style>
 
       {/* Mobile - Single item */}
-      <div className="mt-6 md:hidden">
+      <div className="mt-6 sm:hidden">
         <div
           className={`gallery-tile rounded-lg overflow-hidden h-[200px] ${
             isTransitioning ? "glitch-transition" : ""
@@ -262,8 +265,49 @@ export default function PortfolioGallery() {
         </div>
       </div>
 
+      {/* Tablet - Two items */}
+      <div className="mt-6 hidden sm:grid lg:hidden grid-cols-2 gap-4">
+        {[0, 1].map((position) => {
+          const item = getItemAtPosition(position);
+          const gifFile = isGif(item.src);
+
+          return (
+            <div
+              key={position}
+              data-position={position}
+              className={`gallery-tile rounded-lg overflow-hidden h-[220px] ${
+                isTransitioning ? "glitch-transition" : ""
+              }`}
+            >
+              {item.type === "image" || gifFile ? (
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  title={item.title}
+                  width={1200}
+                  height={800}
+                  unoptimized={gifFile}
+                  className="gallery-media grayscale h-full w-full object-cover"
+                />
+              ) : (
+                <video
+                  src={item.src}
+                  title={item.title}
+                  autoPlay
+                  muted={true}
+                  loop
+                  className="gallery-media grayscale h-full w-full object-cover bg-black"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
       {/* Desktop - Three items */}
-      <div className="mt-6 hidden md:grid grid-cols-3 gap-4">
+      <div className="mt-6 hidden lg:grid grid-cols-3 gap-4">
         {[0, 1, 2].map((position) => {
           const item = getItemAtPosition(position);
           const gifFile = isGif(item.src);

@@ -5,9 +5,9 @@ import { SimpleTooltip } from './ui/tooltip'
 
 const Socials = () => {
     return (
-        <div className='grid grid-cols-5 gap-x-2 gap-y-2 '>
+        <div className='flex flex-wrap items-center justify-end gap-2'>
 
-            <div className='space-x-2 col-span-4 rounded-lg flex md:items-end'>
+            <div className='flex flex-wrap items-center justify-end gap-2 rounded-lg'>
                 {
                     USER.socialLinks.map((socials) => (
                         <SimpleTooltip key={socials.name} content={socials.name} side="bottom" sideOffset={-4}>

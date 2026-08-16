@@ -14,22 +14,22 @@ export default function Home() {
   return (
     <div className="w-full">
       <div className="">
-        <div className="grid w-full grid-cols-4 gap-4 pt-16 md:items-center">
+        <div className="grid w-full grid-cols-[auto_1fr] gap-4 pt-10 sm:pt-12 md:pt-16 md:items-center">
           <ProfileImage />
-          <div className="relative col-span-3">
-            <h1 className="text-[1.47rem] font-bold md:text-6xl md:text-[3.4rem] dark:text-white text-right">
+          <div className="min-w-0 text-right">
+            <h1 className="text-[clamp(1.45rem,6vw,3.4rem)] font-bold leading-tight dark:text-white">
               {USER.firstName} {USER.lastName}
             </h1>
             <p
               style={{ fontFamily: "var(--font-caveat)" }}
-              className="absolute right-0 text-end text-2xl text-neutral-500 md:text-5xl"
+              className="mt-1 text-[clamp(1.35rem,4.6vw,3rem)] leading-none text-neutral-500"
             >
               - {USER.jobTitle}
             </p>
           </div>
         </div>
 
-        <div className="mt-6 flex md:w-full md:items-center md:justify-end ">
+        <div className="mt-6 flex flex-wrap items-center justify-end gap-3 md:w-full">
           <Socials />
           <SimpleTooltip key={"Resume-btn"} content={"Resume"} side="bottom" >
             <Link
