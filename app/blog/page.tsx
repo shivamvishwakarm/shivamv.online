@@ -10,7 +10,7 @@ export default function BlogPage() {
       <div className="flex space-y-2">
 
         <h6 className="mt-6 text-neutral-400 dark:text-neutral-500 text-sm ">
-          You caught me 😮‍💨. I'm too lazy to write blogs.
+         {" You caught me 😮‍💨. I'm too lazy to write blogs."}
           <p className="text-amber-200/30 text-[0.8rem] text-right">I promise. My stories are coming...</p>
         </h6>
       </div>
