@@ -42,7 +42,7 @@ export default function Home() {
           </SimpleTooltip>
         </div>
 
-        {/* <div className="mt-8 flex flex-col  ">
+        <div className="mt-8 flex flex-col  ">
           <h3 className="mb-3 text-xl font-semibold text-neutral-500 ">
             Open source
           </h3>
@@ -60,7 +60,7 @@ export default function Home() {
               see more
             </Link>
           </div>
-        </div> */}
+        </div>
 
         <Experience />
         <Projects />
