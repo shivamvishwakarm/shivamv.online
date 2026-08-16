@@ -2,7 +2,7 @@
 import React from "react";
 import { Dialog } from "./ui/dialog";
 import { Eye } from "lucide-react";
-import image from "../public/image1.jpg"
+import image from "../public/profile0.png"
 import Image from "next/image";
 const ProfileImage = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -16,7 +16,7 @@ const ProfileImage = () => {
         <Image
           priority
           quality={100}
-          className="rounded-full border-sky-500 border p-1 border-dashed relative z-10 group-hover:border-none"
+          className="rounded-full border-gray-500 border p-1 border-dashed relative z-10 group-hover:border-none sepia"
           src={image}
           width={100}
           height={100}
@@ -28,12 +28,12 @@ const ProfileImage = () => {
       </div>
 
       <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <div className="relative w-[80vw] max-w-[500px] aspect-square rounded-full overflow-hidden border-4 border-sky-500 border-dashed p-1 bg-background">
+        <div className="relative w-[80vw] max-w-[500px] aspect-square rounded-full overflow-hidden border-4 border-gray-500 border-dashed p-1 bg-background">
           <Image
             src={image}
             alt="profile preview"
             fill
-            className="object-cover rounded-full"
+            className="object-cover rounded-full sepia"
             quality={100}
             priority
           />
