@@ -13,8 +13,8 @@ export default function BlogPage() {
       </h2>
 
       <p className="mt-6 text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
-        I don't write enough.<br />
-        But when I do, it'll be worth reading.
+{"I don't write enough"}.<br />
+     {   "But when I do, it'll be worth reading." }
       </p>
 
       <div className="my-8 h-px bg-gradient-to-r from-neutral-300 to-transparent dark:from-neutral-700" />
