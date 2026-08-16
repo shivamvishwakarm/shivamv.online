@@ -24,7 +24,7 @@ const Experience = () => {
                     alt={job.company}
                     width={32}
                     height={32}
-                    className="border-muted-foreground rounded-full border border-dashed p-0.5"
+                    className=""
                   />
                 ) : (
                   <Dot className="border-muted-foreground rounded-full border border-dashed dark:text-white" />

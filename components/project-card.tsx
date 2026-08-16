@@ -1,57 +1,74 @@
-import React from 'react'
-import Link from 'next/link'
-import { Github, ExternalLink } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import { ArrowUpRight, Dot, Github } from "lucide-react";
 
 interface Project {
-    name: string;
-    description: string;
-    url: string;
-    github?: string;
-    techStack?: string[];
+  name: string;
+  description: string;
+  url: string;
+  github?: string;
+  techStack?: string[];
 }
 
 const ProjectCard = (project: Project) => {
-    return (
-        <div className='group block h-full relative'>
-            <Link href={project.url} target='_blank' className='absolute inset-0 z-0' />
-            <div className='h-full bg-white dark:bg-[#18181b] hover:bg-neutral-50 dark:hover:bg-[#27272a] transition-colors rounded-xl p-6 border border-neutral-200 dark:border-neutral-800 flex flex-col justify-between group-hover:border-neutral-300 dark:group-hover:border-neutral-700 relative'>
-                <div className='space-y-4'>
-                    <div className='flex items-start justify-between'>
-                        <h3 className='text-xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-black dark:group-hover:text-white transition-colors'>
-                            {project.name}
-                        </h3>
-                        <div className='flex items-center gap-3 text-neutral-500 dark:text-neutral-400 relative z-20'>
-                            {project.github && (
-                                <Link href={project.github} target="_blank" className='hover:text-black dark:hover:text-white transition-colors'>
-                                    <Github className='w-5 h-5' />
-                                </Link>
-                            )}
-                            <Link href={project.url} target="_blank" className='hover:text-black dark:hover:text-white transition-colors'>
-                                <ExternalLink className='w-5 h-5' />
-                            </Link>
-                        </div>
-                    </div>
-
-                    <p className='text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed italic'>
-                        {project.description}
-                    </p>
-                </div>
-
-                {project.techStack && (
-                    <div className='flex flex-wrap gap-2 mt-6'>
-                        {project.techStack.map((tech) => (
-                            <span
-                                key={tech}
-                                className='text-xs font-medium px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-[#27272a] text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700/50'
-                            >
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                )}
-            </div>
+  return (
+    <article className="group flex flex-col justify-between gap-2 py-3 md:flex-row md:items-start">
+      <div className="min-w-0">
+        <div className="flex items-start gap-2">
+          {/* <Dot className="mt-0.5 shrink-0 rounded-full border border-dashed text-neutral-500 dark:text-white" /> */}
+          <Link
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            className="flex min-w-0 flex-row items-start"
+          >
+            <h3 className="text-2xl leading-tight font-semibold text-neutral-900 transition-colors group-hover:text-neutral-600 dark:text-white dark:group-hover:text-neutral-200">
+              {project.name}
+            </h3>
+            <ArrowUpRight
+              size={16}
+              className="mt-1 shrink-0 text-neutral-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
         </div>
-    )
-}
 
-export default ProjectCard
+        <div className="mt-1 ml-4 space-y-2">
+          <p className="text-muted-foreground max-w-xl text-sm leading-relaxed font-medium">
+            {project.description}
+          </p>
+
+          {project.techStack && (
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              {project.techStack.join(" / ")}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="ml-8 flex shrink-0 items-center gap-3 text-neutral-500 md:ml-0 md:pt-1 dark:text-neutral-400">
+        {project.github && (
+          <Link
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.name} GitHub repository`}
+            className="transition-colors hover:text-black dark:hover:text-white"
+          >
+            <Github className="h-4 w-4" />
+          </Link>
+        )}
+        <Link
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${project.name}`}
+          className="transition-colors hover:text-black dark:hover:text-white"
+        >
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
+      </div>
+    </article>
+  );
+};
+
+export default ProjectCard;
