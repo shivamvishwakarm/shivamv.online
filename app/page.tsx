@@ -63,10 +63,10 @@ export default function Home() {
           </div>
         </div> */}
 
-        <PortfolioGallery />
 
         <Experience />
         <Projects />
+        <PortfolioGallery />
         <div className="mt-8">
           <GitHubContributions />
         </div>
