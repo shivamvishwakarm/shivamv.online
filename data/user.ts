@@ -42,14 +42,14 @@ export const USER = {
   jobTitle: "Full Stack Web Developer",
   job: [
     {
-      company: "Monkeys",
-      position: "Open source contributor",
+      company: "Buddhicintaka",
+      position: "Software Engineer",
       describe: [],
       start: "NOV 2025",
       end: "current",
       location: "Remote, India",
-      website: "https://github.com/the-monkeys",
-      logo: "/logo/company/monkeys.svg"
+      website: "https://buddhicintaka.com/",
+      // logo: "/logo/company/monkeys.svg"
     },
 
     {
@@ -94,7 +94,8 @@ And I try to prove that with every project I take on.`,
   keywords:
     "shivam vishwakarma, shivamvisss, shivam09, 09shivam, shivam_visss ",
   projects: [
-{name: "Neura Memory",
+    {
+      name: "Neura Memory",
       description: "An Unified Memory layer for ai agents",
       url: "https://github.com/NeuraMemoryAI/NeuraMemory-AI",
       github: "https://github.com/NeuraMemoryAI/NeuraMemory-AI",
@@ -106,7 +107,7 @@ And I try to prove that with every project I take on.`,
         "React",
         "Vite"
       ]
-},
+    },
 
     {
       name: "Groww - Trading platform",
