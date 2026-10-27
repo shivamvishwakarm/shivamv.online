@@ -24,7 +24,7 @@ export const BOOKSHELF: BookItem[] = [
   {
     title: "System design interview",
     author: "Robert C. Martin",
-    status: "to-read",
+    status: "reading",
     pdf: "/book/SystemDesignInterview.pdf",
   },
   {
@@ -38,5 +38,11 @@ export const BOOKSHELF: BookItem[] = [
     author: "ARPACI -DUSSEAU",
     status: "to-read",
     link: "/book/book.pdf"
+  }, 
+  {
+    title: "AI Engineering",
+    author: "Chip Huyen",
+    status: "reading",
+    link: "/book/AI-Engineering-by-Chip-Huyen.pdf"
   }
 ];
